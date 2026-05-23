@@ -1,0 +1,65 @@
+<!--
+  components/nav.html
+  ===================
+  Barra de navegación principal (sticky).
+  El script loader.js agrega la clase "active" automáticamente
+  al link que corresponde a la página actual.
+
+  Links disponibles:
+    - index.html       → Inicio
+    - nosotros.html    → Nosotros
+    - cursos.html      → Cursos
+    - actividades.html → Actividades
+    - contactanos.html → Contáctanos
+-->
+
+<nav id="site-nav" class="navbar navbar-expand-lg">
+  <div class="container">
+
+    <!-- Botón hamburguesa para móviles -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal" aria-expanded="false"
+            aria-label="Abrir menú">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links del menú -->
+    <div class="collapse navbar-collapse" id="menuPrincipal">
+      <ul class="navbar-nav mx-auto gap-1">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="bi bi-house-door me-1"></i>Inicio
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="nosotros.html">
+            <i class="bi bi-info-circle me-1"></i>Nosotros
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="cursos.html">
+            <i class="bi bi-book me-1"></i>Cursos
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="actividades.html">
+            <i class="bi bi-calendar-event me-1"></i>Actividades
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contactanos.html">
+            <i class="bi bi-chat-dots me-1"></i>Contáctanos
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</nav>

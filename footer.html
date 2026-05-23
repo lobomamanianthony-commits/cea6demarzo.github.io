@@ -1,0 +1,67 @@
+<!--
+  components/footer.html
+  ======================
+  Pie de página del sitio.
+  Cargado dinámicamente por js/loader.js en cada página.
+-->
+
+<footer id="site-footer">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- Columna 1: Info del colegio -->
+      <div class="col-md-4">
+        <h5><i class="bi bi-mortarboard-fill me-2"></i>CEA 6 de Marzo</h5>
+        <p style="font-size:0.9rem; color: rgba(237,224,204,0.7);">
+          Formando personas con valores, conocimiento y compromiso social
+          para construir un mejor futuro.
+        </p>
+      </div>
+
+      <!-- Columna 2: Navegación rápida -->
+      <div class="col-md-4">
+        <h5>Navegación</h5>
+        <ul class="list-unstyled" style="font-size:0.9rem;">
+          <li class="mb-1"><a href="index.html"><i class="bi bi-chevron-right me-1"></i>Inicio</a></li>
+          <li class="mb-1"><a href="nosotros.html"><i class="bi bi-chevron-right me-1"></i>Nosotros</a></li>
+          <li class="mb-1"><a href="cursos.html"><i class="bi bi-chevron-right me-1"></i>Cursos</a></li>
+          <li class="mb-1"><a href="actividades.html"><i class="bi bi-chevron-right me-1"></i>Actividades</a></li>
+          <li class="mb-1"><a href="contactanos.html"><i class="bi bi-chevron-right me-1"></i>Contáctanos</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Contacto -->
+      <div class="col-md-4">
+        <h5>Contacto</h5>
+        <ul class="list-unstyled" style="font-size:0.9rem;">
+          <li class="mb-2">
+            <i class="bi bi-geo-alt me-2 text-caqui"></i>
+            Warnes, Santa Cruz, Bolivia
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-whatsapp me-2" style="color:#25D366"></i>
+            <!-- ↓ Reemplaza con el número real del colegio -->
+            <a href="https://wa.me/59170000000" target="_blank">70000000</a>  <a>o al </a><a href="https://wa.me/59177319003" target="_blank">77319003 </a>
+          </li>
+          <li class="mb-2">
+            <i class="bi bi-envelope me-2"></i>
+            <!-- ↓ Reemplaza con el correo real -->
+            <a href="mailto:cea6demarzo@gmail.com">cea6demarzo@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Línea divisoria y copyright -->
+    <div class="footer-divider"></div>
+    <p class="footer-copy">
+      &copy; <span id="anio-footer"></span> CEA 6 de Marzo · Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<!-- Script inline: actualiza el año automáticamente -->
+<script>
+  document.getElementById("anio-footer").textContent = new Date().getFullYear();
+</script>

@@ -1,0 +1,416 @@
+/**
+ * styles.css
+ * ==========
+ * Estilos personalizados del sitio CEA 6 de Marzo.
+ * Se aplican POR ENCIMA de Bootstrap para personalizar la paleta
+ * y los componentes del diseño.
+ *
+ * Paleta de colores:
+ *  --cafe     : Marrón oscuro principal
+ *  --caqui    : Tono beige/caqui para fondos secundarios
+ *  --blanco   : Blanco puro
+ *  --negro    : Negro suave para textos
+ */
+
+/* ============================================================
+   1. VARIABLES DE COLOR Y TIPOGRAFÍA
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --cafe:         #5C3317;   /* café oscuro – color primario */
+  --cafe-claro:   #8B5A3A;   /* variante más clara del café */
+  --caqui:        #C2A882;   /* caqui/beige – color secundario */
+  --caqui-suave:  #EDE0CC;   /* caqui muy claro para fondos */
+  --blanco:       #FFFFFF;
+  --negro:        #1A1A1A;
+  --gris-suave:   #F5F0E8;   /* fondo de secciones alternas */
+
+  --fuente-titulo: 'Playfair Display', serif;
+  --fuente-cuerpo: 'Lato', sans-serif;
+
+  --sombra: 0 4px 18px rgba(92, 51, 23, 0.15);
+  --radio:  8px;
+}
+
+/* ============================================================
+   2. ESTILOS BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  background-color: var(--blanco);
+  color: var(--negro);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--fuente-titulo);
+  color: var(--cafe);
+}
+
+a {
+  color: var(--cafe);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cafe-claro);
+}
+
+/* ============================================================
+   3. HEADER
+   ============================================================ */
+#site-header {
+  background-color: var(--cafe);
+  color: var(--blanco);
+  padding: 18px 0;
+  border-bottom: 4px solid var(--caqui);
+}
+
+#site-header .logo-text {
+  font-family: var(--fuente-titulo);
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--blanco);
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+#site-header .logo-sub {
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+  color: var(--caqui);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#site-header .logo-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--caqui);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cafe);
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   4. NAVBAR
+   ============================================================ */
+#site-nav {
+  background-color: var(--negro);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+#site-nav .navbar-nav .nav-link {
+  color: var(--caqui) !important;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  padding: 14px 16px !important;
+  transition: color 0.25s, background 0.25s;
+  border-bottom: 3px solid transparent;
+}
+
+#site-nav .navbar-nav .nav-link:hover,
+#site-nav .navbar-nav .nav-link.active {
+  color: var(--blanco) !important;
+  border-bottom: 3px solid var(--caqui);
+  background: rgba(255,255,255,0.05);
+}
+
+#site-nav .navbar-toggler {
+  border-color: var(--caqui);
+}
+
+#site-nav .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ============================================================
+   5. HERO SECTION (solo index)
+   ============================================================ */
+.hero {
+  background: linear-gradient(135deg, var(--cafe) 0%, var(--cafe-claro) 100%);
+  color: var(--blanco);
+  padding: 90px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -80px;
+  width: 380px; height: 380px;
+  background: rgba(194, 168, 130, 0.15);
+  border-radius: 50%;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: -60px;
+  width: 280px; height: 280px;
+  background: rgba(194, 168, 130, 0.10);
+  border-radius: 50%;
+}
+
+.hero h1 {
+  color: var(--blanco);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 900;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.hero p.lead {
+  color: var(--caqui-suave);
+  font-size: 1.15rem;
+}
+
+.hero .btn-hero {
+  background: var(--caqui);
+  color: var(--cafe);
+  border: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 30px;
+  border-radius: var(--radio);
+  letter-spacing: 1px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hero .btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* ============================================================
+   6. TARJETAS (CARDS) GENERALES
+   ============================================================ */
+.card-cea {
+  border: none;
+  border-radius: var(--radio);
+  box-shadow: var(--sombra);
+  transition: transform 0.25s, box-shadow 0.25s;
+  overflow: hidden;
+}
+
+.card-cea:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(92, 51, 23, 0.2);
+}
+
+.card-cea .card-header-custom {
+  background: var(--cafe);
+  color: var(--blanco);
+  padding: 14px 20px;
+  font-family: var(--fuente-titulo);
+  font-size: 1.1rem;
+}
+
+.card-cea .card-body {
+  background: var(--blanco);
+  padding: 20px;
+}
+
+/* ============================================================
+   7. SECCIÓN "VALORES / STATS"
+   ============================================================ */
+.seccion-valores {
+  background: var(--cafe);
+  color: var(--blanco);
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-item .numero {
+  font-family: var(--fuente-titulo);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--caqui);
+  line-height: 1;
+}
+
+.stat-item .etiqueta {
+  font-size: 0.9rem;
+  color: var(--caqui-suave);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+/* ============================================================
+   8. TÍTULOS DE SECCIÓN
+   ============================================================ */
+.titulo-seccion {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.titulo-seccion h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.titulo-seccion .linea {
+  width: 70px;
+  height: 4px;
+  background: var(--caqui);
+  margin: 0 auto 16px;
+  border-radius: 2px;
+}
+
+.titulo-seccion p {
+  color: #6b5a4a;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   9. BADGES DE CURSOS
+   ============================================================ */
+.badge-nivel {
+  background: var(--caqui);
+  color: var(--cafe);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.badge-nivel.presencial {
+  background: var(--cafe);
+  color: var(--blanco);
+}
+
+/* ============================================================
+   10. SECCIÓN DE CONTACTO / WHATSAPP
+   ============================================================ */
+.btn-whatsapp {
+  background: #25D366;
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 16px 40px;
+  border-radius: 50px;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.45);
+  color: var(--blanco);
+}
+
+.caja-contacto {
+  background: var(--gris-suave);
+  border-left: 5px solid var(--cafe);
+  border-radius: var(--radio);
+  padding: 30px;
+}
+
+/* ============================================================
+   11. FOOTER
+   ============================================================ */
+#site-footer {
+  background: var(--negro);
+  color: var(--caqui-suave);
+  padding: 50px 0 20px;
+}
+
+#site-footer h5 {
+  color: var(--caqui);
+  font-family: var(--fuente-titulo);
+  margin-bottom: 16px;
+}
+
+#site-footer a {
+  color: var(--caqui-suave);
+  transition: color 0.2s;
+}
+
+#site-footer a:hover {
+  color: var(--caqui);
+}
+
+#site-footer .footer-divider {
+  border-top: 1px solid rgba(194,168,130,0.25);
+  margin: 30px 0 20px;
+}
+
+#site-footer .footer-copy {
+  font-size: 0.82rem;
+  color: rgba(237, 224, 204, 0.55);
+  text-align: center;
+}
+
+/* ============================================================
+   12. UTILITARIOS
+   ============================================================ */
+.bg-caqui-suave { background-color: var(--gris-suave); }
+.bg-cafe        { background-color: var(--cafe); }
+.text-cafe      { color: var(--cafe); }
+.text-caqui     { color: var(--caqui); }
+
+/* Separador decorativo */
+.sep {
+  width: 50px;
+  height: 3px;
+  background: var(--caqui);
+  border-radius: 2px;
+  margin: 12px 0;
+}
+
+/* Icono redondo */
+.icono-redondo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--caqui-suave);
+  color: var(--cafe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Animación fade-in al cargar */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive ajustes menores */
+@media (max-width: 768px) {
+  .hero { padding: 60px 0 50px; }
+  #site-header .logo-text { font-size: 1.4rem; }
+}

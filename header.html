@@ -1,0 +1,50 @@
+<!--
+  components/header.html
+  ======================
+  Cabecera principal del sitio.
+  Este archivo es cargado dinámicamente por js/loader.js
+  y se inyecta en el <div id="header-placeholder"> de cada página.
+
+  LOGO: Se usa la imagen real del CEA ubicada en img/logoCEA.jpeg
+-->
+
+<header id="site-header">
+  <div class="container">
+    <div class="d-flex align-items-center gap-3">
+
+      <!-- Logo real del CEA (imagen oficial) -->
+      <div class="logo-imagen">
+        <img src="img/logoCEA.jpeg"
+             alt="Logo CEA 6 de Marzo"
+             class="logo-img">
+      </div>
+
+      <!-- Textos del encabezado -->
+      <div>
+        <div class="logo-text">CEA 6 de Marzo</div>
+        <div class="logo-sub">Educación Secundaria de Jóvenes y Adultos</div>
+        <div class="logo-sub" style="letter-spacing:2px; font-size:0.75rem; opacity:0.8;">
+          Integración del Norte · ESA &amp; ETA
+        </div>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- Estilos específicos del logo (van inline porque el header se inyecta dinámicamente) -->
+<style>
+  .logo-imagen {
+    flex-shrink: 0;
+  }
+  .logo-img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;   /* mantiene proporciones del escudo ovalado */
+    border-radius: 4px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+  }
+  @media (max-width: 576px) {
+    .logo-img { width: 54px; height: 54px; }
+  }
+</style>

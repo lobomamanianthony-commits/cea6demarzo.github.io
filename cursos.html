@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CEA 6 de Marzo – Cursos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+  <div id="nav-placeholder"></div>
+
+  <!-- ====================================================
+       CONTENIDO: cursos.html
+       ==================================================== -->
+
+  <!-- Banner de página -->
+  <div style="background:var(--cafe); padding:50px 0;" class="text-center fade-in-up">
+    <div class="container">
+      <h1 style="color:var(--blanco);">Cursos Disponibles</h1>
+      <div class="linea mx-auto mt-3"></div>
+      <p style="color:var(--caqui-suave); max-width:600px; margin:12px auto 0;">
+        Ofrecemos una amplia oferta académica para todos los niveles.
+        Elige el camino que mejor se adapte a tus metas.
+      </p>
+    </div>
+  </div>
+
+  <!-- TABS DE NIVEL EDUCATIVO
+       Bootstrap Tabs: cada tab muestra cursos de un nivel distinto.
+       No requiere JS extra; Bootstrap lo maneja automáticamente. -->
+  <section class="py-5">
+    <div class="container">
+
+      <!-- Pestañas de niveles -->
+      <ul class="nav nav-tabs justify-content-center mb-4" id="tabNiveles" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="tab-primaria" data-bs-toggle="tab"
+                  data-bs-target="#primaria" type="button" role="tab">
+            <!-- Ícono de lápiz: representa el nivel inicial de educación -->
+            <i class="bi bi-pencil-fill me-2"></i>Primaria
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-secundaria" data-bs-toggle="tab"
+                  data-bs-target="#secundaria" type="button" role="tab">
+            <!-- Ícono de libro: nivel más avanzado de lectura y estudio -->
+            <i class="bi bi-book-fill me-2"></i>Secundaria
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="tab-tecnico" data-bs-toggle="tab"
+                  data-bs-target="#tecnico" type="button" role="tab">
+            <!-- Ícono de herramientas: carreras técnicas prácticas -->
+            <i class="bi bi-tools me-2"></i>Técnico Medio
+          </button>
+        </li>
+      </ul>
+
+      <!-- Contenido de las pestañas -->
+      <div class="tab-content" id="tabContenido">
+
+        <!-- TAB: PRIMARIA -->
+        <div class="tab-pane fade show active" id="primaria" role="tabpanel">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <!-- Estrella de 3 puntas: primeros años de primaria, base del aprendizaje -->
+                  <i class="bi bi-123 me-2"></i>1° a 3° de Primaria
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel mb-2 d-inline-block">Presencial</span>
+                  <ul class="text-muted" style="font-size:0.9rem; padding-left:18px;">
+                    <li>Comunicación y lenguajes</li>
+                    <li>Ciencias sociales</li>
+                    <li>Ciencias naturales</li>
+                    <li>Matemáticas</li>
+                  </ul>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <!-- Ícono de lista ordenada: nivel intermedio con materias más estructuradas -->
+                  <i class="bi bi-list-ol me-2"></i>4° a 6° de Primaria
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel mb-2 d-inline-block">Presencial</span>
+                  <ul class="text-muted" style="font-size:0.9rem; padding-left:18px;">
+                    <li>Comunicación y lenguajes</li>
+                    <li>Ciencias sociales</li>
+                    <li>Ciencias naturales</li>
+                    <li>Matemáticas</li>
+                  </ul>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TAB: SECUNDARIA -->
+        <div class="tab-pane fade" id="secundaria" role="tabpanel">
+          <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <!-- Gráfico de barras: aprendizajes aplicados con análisis y datos -->
+                  <i class="bi bi-bar-chart-fill me-2"></i>1° y 2° de Secundaria
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel mb-2 d-inline-block">Aprendizajes aplicados</span>
+                  <ul class="text-muted" style="font-size:0.9rem; padding-left:18px;">
+                    <li>Ciencias naturales</li>
+                    <li>Matemáticas</li>
+                    <li>Comunicación y lenguajes</li>
+                    <li>Ciencias sociales</li>
+                  </ul>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <!-- Ícono de puzzle: aprendizajes complementarios que encajan entre sí -->
+                  <i class="bi bi-puzzle-fill me-2"></i>3° y 4° de Secundaria
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel mb-2 d-inline-block">Aprendizajes complementarios</span>
+                  <ul class="text-muted" style="font-size:0.9rem; padding-left:18px;">
+                    <li>Ciencias naturales</li>
+                    <li>Matemáticas</li>
+                    <li>Comunicación y lenguajes</li>
+                    <li>Ciencias sociales</li>
+                  </ul>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <!-- Birrete: aprendizajes especializados, culminación de la secundaria -->
+                  <i class="bi bi-mortarboard-fill me-2"></i>5° y 6° de Secundaria
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel mb-2 d-inline-block">Aprendizajes especializados</span>
+                  <ul class="text-muted" style="font-size:0.9rem; padding-left:18px;">
+                    <li>Ciencias naturales</li>
+                    <li>Matemáticas</li>
+                    <li>Comunicación y lenguajes</li>
+                    <li>Ciencias sociales</li>
+                  </ul>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- TAB: TÉCNICO MEDIO -->
+        <div class="tab-pane fade" id="tecnico" role="tabpanel">
+          <div class="row g-4">
+
+            <!-- ELECTRICIDAD INDUSTRIAL
+                 Ícono bi-lightning-charge-fill: rayo eléctrico, muy asociado a electricidad -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <i class="bi bi-lightning-charge-fill me-2"></i>Electricidad Industrial
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel presencial mb-2 d-inline-block">Técnico Medio</span>
+                  <p class="text-muted" style="font-size:0.9rem;">
+                    Instalaciones eléctricas, circuitos y sistemas industriales.
+                    Incluye certificación del Ministerio de Educación al finalizar.
+                  </p>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>2 años · Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECRETARIADO
+                 Ícono bi-file-earmark-text-fill: documento/expediente, asociado a gestión documental -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <i class="bi bi-file-earmark-text-fill me-2"></i>Secretariado
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel presencial mb-2 d-inline-block">Técnico Medio</span>
+                  <p class="text-muted" style="font-size:0.9rem;">
+                    Gestión documental, ofimática, redacción y administración de oficinas.
+                    Incluye certificación del Ministerio de Educación al finalizar.
+                  </p>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>2 años · Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- VETERINARIA
+                 Ícono bi-heart-pulse-fill: pulso cardíaco/salud, asociado a ciencias de la salud animal -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <i class="bi bi-heart-pulse-fill me-2"></i>Veterinaria
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel presencial mb-2 d-inline-block">Técnico Medio</span>
+                  <p class="text-muted" style="font-size:0.9rem;">
+                    Cuidado y salud animal, técnicas veterinarias básicas y manejo de fauna.
+                    Incluye certificación del Ministerio de Educación al finalizar.
+                  </p>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>2 años · Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTABILIDAD BÁSICA
+                 Ícono bi-calculator-fill: calculadora, símbolo universal de contabilidad y finanzas -->
+            <div class="col-md-6 col-lg-4">
+              <div class="card card-cea h-100">
+                <div class="card-header-custom">
+                  <i class="bi bi-calculator-fill me-2"></i>Contabilidad Básica
+                </div>
+                <div class="card-body">
+                  <span class="badge-nivel presencial mb-2 d-inline-block">Técnico Medio</span>
+                  <p class="text-muted" style="font-size:0.9rem;">
+                    Fundamentos de contabilidad, manejo de libros y gestión financiera
+                    para pequeños negocios. Incluye certificación del Ministerio de Educación al finalizar.
+                  </p>
+                  <div class="sep"></div>
+                  <small><i class="bi bi-clock me-1 text-cafe"></i>2 años · Lunes a Viernes · 19:00 – 22:00</small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div><!-- /tab-content -->
+    </div>
+  </section>
+
+  <!-- LLAMADA A LA ACCIÓN DE INSCRIPCIÓN -->
+  <section class="py-5 bg-caqui-suave text-center">
+    <div class="container">
+      <h2>¿Te interesa algún curso?</h2>
+      <p class="text-muted mb-4">Contáctanos y te brindamos toda la información sobre horarios, costos e inscripciones.</p>
+      <a href="contactanos.html" class="btn btn-lg px-5 py-3"
+         style="background:var(--cafe); color:var(--blanco); font-weight:700; border-radius:var(--radio);">
+        <i class="bi bi-whatsapp me-2"></i>Consultar ahora
+      </a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/loader.js"></script>
+
+  <!-- Estilos para las tabs de nivel -->
+  <style>
+    #tabNiveles .nav-link {
+      color: var(--cafe);
+      font-weight: 700;
+      border-radius: var(--radio) var(--radio) 0 0;
+    }
+    #tabNiveles .nav-link.active {
+      background: var(--cafe);
+      color: var(--blanco);
+      border-color: var(--cafe);
+    }
+    #tabNiveles .nav-link:hover:not(.active) {
+      background: var(--caqui-suave);
+    }
+  </style>
+
+</body>
+</html>
